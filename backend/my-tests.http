@@ -1,5 +1,45 @@
+// users
+
+GET http://localhost:5000/users/
+
+###
+
 POST  http://localhost:5000/users/add 
-Content-Type: newUser
+Content-Type: application/json
+
 {
-    username:boob
-} 
+    "username": "bob"
+}
+
+// exercises
+###
+
+GET http://localhost:5000/exercises/
+
+###
+
+GET http://localhost:5000/exercises/60f9c5fa4a8b662cecb5a240
+
+###
+
+POST  http://localhost:5000/exercises/add 
+Content-Type: application/json
+
+{
+    "username": "bob",
+    "description": "bobs electric sperm crunches",
+    "duration": 2,
+    "date": "2019-05-29T02:22:49.0522"
+}
+
+###
+
+POST  http://localhost:5000/exercises/update/60f9c5fa4a8b662cecb5a240
+Content-Type: application/json
+
+{
+    "username": "bob",
+    "description": "bobs booty expander squats",
+    "duration": 50,
+    "date": "2019-05-29T02:22:49.0522"
+}
